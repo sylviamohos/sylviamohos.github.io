@@ -1,0 +1,85 @@
+.top_flex_container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    max-width: 1500px;
+}
+.top_flex_container .top_flex_left {
+    text-align: center;
+    margin-top: 3%;
+    max-width: 750px;
+    max-height: 1000px;
+    height: 100%;
+    width: 100%;
+}
+.top_flex_container .top_flex_right {
+    max-width: 750px;
+    max-height: 1000px;
+}
+.top_flex_container .top_flex_right img {
+    width: 100%;
+    height: 100%;
+}
+.top_flex_container .top_flex_left .moto1 {
+    font-size: 44px;
+    font-weight: 1300;
+}
+.top_flex_container .top_flex_left .moto2 {
+    font-size: 44px;
+    font-weight: 500;
+}
+.top_flex_container .top_flex_left p {
+    margin-top: 15%;
+    font-size: 20px;
+}
+.top_flex_container .top_flex_left h1 {
+    display: inline;
+}
+.top_flex_container .top_flex_left ul {
+    margin-top: 15%;
+}
+.top_flex_container .top_flex_left ul li {
+    display: inline-block;
+}
+.top_flex_container .top_flex_left ul li button {
+    border: none;
+    background-color: rgb(0, 0, 48);
+    color: white;
+    padding: 12%;
+    width: 120px;
+    font-size: medium;
+    border-radius: 5px;
+}
+
+.top_flex_container .top_flex_left ul li button:hover {
+    color: rgb(109, 109, 109);
+    font-style: italic;
+}
+
+.top_flex_container .top_flex_left .bottom_expression {
+    margin-top: 15%;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.top_flex_container .top_flex_right img {
+    max-height: 600px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+.content .item {
+    box-sizing: border-box;
+    margin-top: 60px;
+    border: solid 2px;
+    background-color: white;
+    border-radius: 30px;
+}
+.content .item .desc {
+    max-width: 400px;
+}
