@@ -17,6 +17,7 @@
 .logo_small {
   margin-right: 5px;
   cursor: pointer;
+  transition-duration: 0.4s;
 }
 .logo_small:hover {
   opacity: 0.7;
@@ -34,13 +35,14 @@
 
 .header ul li {
   margin-right: 30px;
-  font-size: x-large;
+  font-size: large;
 }
 
 .link {
   color: black;
   text-decoration: none;
   cursor: pointer;
+  transition-duration: 0.4s;
 }
 .link:hover {
   color: rgb(109, 109, 109);
@@ -59,8 +61,31 @@
   padding: 8px;
   margin-right: 5px;
   font-size: large;
+  transition-duration: 0.4s;
+}
+.search_btn:hover {
+  color: rgb(109, 109, 109);
+  font-style: italic;
+}
+.search_btn:active {
+  background-color: rgb(53, 53, 110);
 }
 .search_input {
   padding: 8px;
   font-size: large;
+}
+.opt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: large;
+}
+.account {
+  color: rgb(0, 41, 152);
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.account:hover {
+  font-style: italic;
 }

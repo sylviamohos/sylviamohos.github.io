@@ -1,0 +1,101 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header h1 {
+  text-align: center;
+}
+header p {
+  text-align: center;
+  font-size: 22px;
+}
+.product_container {
+  display: inline-block;
+  padding-left: 5%;
+}
+table.product_table {
+  border: 3px solid orange;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+img.table_img {
+  width: 80px;
+  height: 80px;
+}
+td {
+  padding: 5px 30px 5px 30px;
+}
+.quant_col {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 33px;
+}
+.icon {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.bot_data {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+}
+.order_confirm {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.order_data {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+}
+.order_data p {
+  margin-right: 100px;
+}
+.quantityData {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.quantityData .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 200px;
+  width: 100%;
+  padding-bottom: 5px;
+}
+.quantityData .top input {
+  border: solid 2x black;
+  border-radius: 5px;
+  width: 40px;
+}
+.quantityData .incdec {
+  border: solid 2x black;
+  background-color: rgb(0, 0, 98);
+  color: white;
+  border-radius: 5px;
+  width: 20px;
+  margin-left: 5px;
+}
+.quantityData .rem_btn {
+  border: solid 2x black;
+  background-color: #ff6464;
+  border-radius: 5px;
+  width: 100%;
+}
+.navThread th {
+  text-align: center;
+}

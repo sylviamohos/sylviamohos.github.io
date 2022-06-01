@@ -1,19 +1,25 @@
 import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import "./resources/Logo-small.png";
-import {  useRef, useState } from "react";
-import axios from "axios";
+import { useRef, useState } from "react";
 import React from "react";
-
-const api = axios.create({
-  baseUrl: "https://jsonplaceholder.typicode.com/",
-});
-
 
 
 function MainNavigation(props) {
   const input = useRef();
   const [criteria, setCriteria] = useState("");
+
+  let customer = JSON.parse(localStorage.getItem("customer"));
+
+  function signout() {
+    if (customer != null) {
+      localStorage.removeItem("customer");
+    } else {
+      console.log("error");
+    }
+    this.setState();
+  }
+
 
   return (
     <header className={classes.header}>
@@ -27,12 +33,15 @@ function MainNavigation(props) {
       <h1 className={classes.h1}>You're Cool!</h1>
 
       <div className={classes.search}>
-        <button
-          className={classes.search_btn}
-          onClick={() => props.content(criteria)}
-        >
-          GO!
-        </button>
+        <Link to="/">
+          <button
+            className={classes.search_btn}
+            onClick={() => props.content(criteria)}
+          >
+            GO!
+          </button>
+        </Link>
+
         <input
           className={classes.search_input}
           type="text"
@@ -42,19 +51,39 @@ function MainNavigation(props) {
         ></input>
       </div>
       <ul>
+        {customer != null ? (
+          <div className={classes.opt}>
+            <li>
+              <h5>
+                Welcome Back, <br />
+                {customer.name}! <br />
+          
+                <Link className={classes.account} to="/account">Go to account</Link>
+              </h5>
+            </li>
+            <li>
+              <Link className={classes.link} to="/" onClick={signout}>
+                Sign Out
+              </Link>
+            </li>
+          </div>
+        ) : (
+          <div className={classes.opt}>
+            <li>
+              <Link className={classes.link} to="/login">
+                Log In
+              </Link>
+            </li>
+            <li>
+              <Link className={classes.link} to="/signup">
+                Sign Up
+              </Link>
+            </li>
+          </div>
+        )}
         <li>
-          <a className={classes.link} onClick={props.openSignUpModal}>
-            Sign Up
-          </a>
-        </li>
-        <li>
-          <a className={classes.link} onClick={props.openLoginModal}>
-            Log In
-          </a>
-        </li>
-        <li>
-          <Link className={classes.link} to="/account">
-            Account
+          <Link className={classes.link} to="/">
+            Home
           </Link>
         </li>
         <li>
