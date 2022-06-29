@@ -22,6 +22,7 @@ function Home(props) {
         console.log("cart after: ", cart[i]);
       }
     }
+
     if (!productExists) {
       let item = {
         description: product.description,
@@ -37,6 +38,7 @@ function Home(props) {
     localStorage.setItem("cart", JSON.stringify(cart));
     product.quantity -= 1;
 
+  
     let btn = document.getElementById(index);
     if (product.quantity <= 0) {
       btn.className = classes.outOfStock;
